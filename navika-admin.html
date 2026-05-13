@@ -208,7 +208,12 @@ let currentPage = 1;
 const PAGE_SIZE = 20;
 let sortCol = 'created_at', sortDir = -1;
 
-function getConfig() { try { return JSON.parse(localStorage.getItem(STORAGE_KEY))||{}; } catch { return {}; } }
+function getConfig() {
+  return {
+    url: 'https://tnonxorawdxhobzkyvos.supabase.co',
+    key: 'sb_publishable_Xv8lkvI7MZkhZGfiQDY6Dg_u9T6EHzw'
+  };
+}
 
 function saveConfigAndLoad() {
   const url = document.getElementById('cfgUrl').value.trim().replace(/\/$/,'');
