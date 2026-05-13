@@ -251,7 +251,10 @@ const STORAGE_KEY = 'navika_supabase_config';
 
 // ── Config ──
 function getConfig() {
-  try { return JSON.parse(localStorage.getItem(STORAGE_KEY)) || {}; } catch { return {}; }
+  return {
+    url: 'https://tnonxorawdxhobzkyvos.supabase.co',
+    key: 'sb_publishable_Xv8lkvI7MZkhZGfiQDY6Dg_u9T6EHzw'
+  };
 }
 function saveConfig() {
   const url = document.getElementById('cfgUrl').value.trim().replace(/\/$/, '');
